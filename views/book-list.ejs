@@ -7,10 +7,10 @@
 </head>
 <body>
     <div>
-        <h2>Database results</h2>
+        <h2>Book list</h2>
         <ul>
             <% results.forEach(function(r) { %>
-                <li><%= r.id %> - <%= r.name %></li>
+                <li><%= r.id %> - <%= r.title %> by <%= r.author %></li>
             <% }); %>
         </ul>
       </div>
