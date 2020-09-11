@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book list</title>
+</head>
+<body>
+    <div>
+        <h2>Database results</h2>
+        <ul>
+            <% results.forEach(function(r) { %>
+                <li><%= r.id %> - <%= r.name %></li>
+            <% }); %>
+        </ul>
+      </div>
+    
+</body>
+</html>
