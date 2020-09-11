@@ -26,7 +26,10 @@ app.get('/', (req, res) => res.render('home'))
 app.get('/books', async (req, res) => {
     try {
         const client = await pool.connect()
-        console.log('connected to db')
+        const result = await client.query('SELECT * FROM booklist');
+        const results = { 'results': (result) ? result.rows : null};
+        res.render('book-list', results );
+        client.release();
     } catch(err) {
         console.log(err)
         res.send('error ' + err)
