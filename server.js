@@ -36,5 +36,11 @@ app.get('/books', async (req, res) => {
     }
 })
 
+app.get('/books/submit', (req, res) => res.render('book-submit'))
+
+app.post('/books/submit', (req, res) => {
+    res.send('all right you kind of submitted')
+})
+
 app.listen(PORT) 
 console.log(`listening on ${ PORT }`)
