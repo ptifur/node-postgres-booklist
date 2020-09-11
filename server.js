@@ -32,14 +32,21 @@ app.get('/books', async (req, res) => {
         client.release();
     } catch(err) {
         console.log(err)
-        res.send('error ' + err)
+        res.send(err)
     }
 })
 
 app.get('/books/submit', (req, res) => res.render('book-submit'))
 
-app.post('/books/submit', (req, res) => {
-    res.send('all right you kind of submitted')
+app.post('/books/submit', async (req, res) => {
+    try {
+
+        const client = await pool.connect()
+        // const sql = await client.query(INSERT INTO booklist VALUES $1, $2)
+
+    } catch(err) {
+        res.send(err)
+    }
 })
 
 app.listen(PORT) 
