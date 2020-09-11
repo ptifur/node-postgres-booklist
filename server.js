@@ -40,10 +40,13 @@ app.get('/books/submit', (req, res) => res.render('book-submit'))
 
 app.post('/books/submit', async (req, res) => {
     try {
-
         const client = await pool.connect()
-        // const sql = await client.query(INSERT INTO booklist VALUES $1, $2)
-
+        console.log(client)
+        const sql = 'INSERT INTO booklist (title) VALUES ($1)'
+        const params = [req.body.title]
+        console.log(params)
+        client.query(sql, params)
+        client.release();
     } catch(err) {
         res.send(err)
     }
