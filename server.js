@@ -43,7 +43,6 @@ app.post('/books/submit', async (req, res) => {
         const client = await pool.connect()
         const sql = 'INSERT INTO booklist (title, author) VALUES ($1, $2)'
         const params = [req.body.title, req.body.author]
-        console.log(params)
         client.query(sql, params)
         client.release();
         res.redirect('/books')
