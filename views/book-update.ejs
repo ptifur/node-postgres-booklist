@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a book</title>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <h2>Edit the book</h2>
+
+            <form method="POST">
+                <input type="text" placeholder="title" value="<%= r.title %>" name="title" required>
+                <input type="text" placeholder="author" value="<%= r.author %>" name="author">
+                <button type="submit">Update</button>
+            </form>
+        </div>
+
+        <div class="nav">
+            <a href="/books">Back</a> to the list
+        </div>
+
+    </div>
+</body>
+</html>

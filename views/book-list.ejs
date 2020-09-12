@@ -13,7 +13,11 @@
             <ul>
                 <% results.forEach(function(r) { %>
                     <li>
-                        <%= r.id %> - <%= r.title %> by <%= r.author %> <a href="/books/delete/<%= r.id %>" class="delete">Delete</a>
+                        <span class="id"><%= r.id %></span> 
+                        <span class="list text"><%= r.title %></span> 
+                        <span class="list text">by <%= r.author %></span>
+                        <a href="/books/edit/<%= r.id %>" class="edit">edit</a>
+                        <a href="/books/delete/<%= r.id %>" class="delete">Delete</a>
                     </li>
                 <% }); %>
             </ul>

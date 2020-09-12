@@ -29,6 +29,23 @@ li {
     justify-content: space-between;
 }
 
+span {
+    display: flex;
+    align-items: center;
+    /* border: 1px dashed #dfdfdf; */
+}
+
+.list {
+    min-width: 15%;
+}
+
+span.id {
+    color: #f14848;
+    font-size: .8em;
+    font-weight: 600;
+    width: 25px;
+}
+
 .nav {
     padding: 35px;
 }
@@ -50,4 +67,50 @@ li {
 .delete:hover {
     border: 2px solid #f14848;
     color: #f14848;
+}
+
+.edit {
+    /* border: 1px dashed #dfdfdf; */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #c9c9c9;
+    font-size: .9rem;
+    /* font-weight: 500; */
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    border: 2px solid #485058;
+    padding: 5px 25px;
+    border-radius: 16px;
+    margin-top: 15px;
+    color: #485058;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-family: 'Open Sans', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-decoration: none;
+    background: #ffffff;
+    width: 180px;
+}
+
+button:hover {
+    background: #eeeeee;
+}
+
+input {
+    width: 50vw;
+    font-size: .9em;
+    padding: 6px;
+    font-weight: 500;
+    border: none;
+    border-bottom: 1px solid #485058;
 }
