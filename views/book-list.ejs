@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book list</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div>
-        <h2>Book list</h2>
-        <ul>
-            <% results.forEach(function(r) { %>
-                <li><%= r.id %> - <%= r.title %> by <%= r.author %></li>
-            <% }); %>
-        </ul>
-      </div>
+    <div class="wrapper">
+        <div class="main">
+            <h2>Book list</h2>
+            <ul>
+                <% results.forEach(function(r) { %>
+                    <li>
+                        <%= r.id %> - <%= r.title %> by <%= r.author %> <a href="/books/delete/<%= r.id %>" class="delete">Delete</a>
+                    </li>
+                <% }); %>
+            </ul>
+        </div>
 
-      <a href="/books/submit">Submit</a> another book
-    
+        <div class="nav">
+            <a href="/books/submit">Submit</a> another book
+        </div>
+        
+    </div>
 </body>
 </html>

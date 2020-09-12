@@ -51,5 +51,18 @@ app.post('/books/submit', async (req, res) => {
     }
 })
 
+app.get('/books/delete/:id', async (req, res) => {
+    try {
+        const client = await pool.connect()
+        const sql = 'DELETE FROM booklist WHERE id = $1'
+        const params = [req.params.id]
+        client.query(sql, params)
+        client.release()
+        res.redirect('/books')
+    } catch(err) {
+        res.send(err)
+    }
+})
+
 app.listen(PORT) 
 console.log(`listening on ${ PORT }`)

@@ -4,15 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a book</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Add a book to the list</h1>
+    <div class="wrapper">
+        <div class="main">
+            <h2>Add a book to the list</h2>
 
-    <form method="POST">
-        <input type="text" placeholder="title" name="title">
-        <input type="text" placeholder="author" name="author">
-        <button type="submit">Submit</button>
-    </form>
+            <form method="POST">
+                <input type="text" placeholder="title" name="title" required>
+                <input type="text" placeholder="author" name="author">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
 
+        <div class="nav">
+            <a href="/books">Back</a> to the list
+        </div>
+
+    </div>
 </body>
 </html>
